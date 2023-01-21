@@ -1,0 +1,11 @@
+/*to keep action in js, style in css and details in html. we need to make styling edits here and call them there  */
+.big_title{
+    font-size : 10rem;
+    color : yellow;
+    font-family: cursive;
+
+}
+
+.margin-50{
+    margin: 50px;
+}
