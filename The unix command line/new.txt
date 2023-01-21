@@ -1,0 +1,37 @@
+I am not going to type everything i know very well...i am tired 
+
+cd ~ to the root 
+cd .. one step back
+
+if you are not able to navigate through the path in terminal press alt
+alt + click
+
+to go to be beginning of the line 
+control + a 
+
+end of command line
+control + e 
+
+clears the entire line
+control + u
+
+touch text.txt 
+start text.txt
+
+start appname text.txt
+to open in a certain app
+
+rm text.txt to remove a file
+
+to remove all files
+rm *
+
+pwd tells entire path
+
+to remove folder
+rm -r Amee/
+
+good website learnenough.com
+learn enough cmd line to be dangerous
+
+
