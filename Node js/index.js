@@ -14,4 +14,6 @@ console.log(mysuperhero);
 
 //same for supervillians but i am not going to do it too simple no
 
+//atom is built on electron which is built on node
+
  
