@@ -1,0 +1,133 @@
+mkdir story
+cd story
+touch chapter1.txt
+git init 
+(initialized empty git repo url)
+
+git status
+
+git add <filename> or 
+git add .
+
+git commit -m "message"
+
+git log
+
+git diff chapter3.txt 
+
+git checkout chapter3.txt - rollback to the last version
+
+(it is locally saved abhi to add on github make a repo and copy its url)
+
+git remote add origin url
+
+git push -u origin master/main
+
+//insights me network is coolll
+
+//there might be some files that you dont want to commit on github
+//privacy reasons
+
+//people dont want to upload ds store file mostly,,its not visible but do ls -a and it is there
+
+touch .gitignore
+//see it using ls -a
+
+open .gitignore
+
+git init
+git add .
+git status
+
+//everything in the current staging area should be removed 
+git rm --cached -r
+
+git status
+
+open .gitignore
+// specify file names
+.DS_Store
+secrets.txt
+
+// #comment
+//*.txt means all files with .txt extention will be ignored
+
+git add .
+git status
+
+git commit -m "msg"
+
+//github gitignore repo has existing gitignore files for swift obj c and many more
+
+
+
+//cloninnggg
+//open source ios apps
+
+//clone url
+
+git clone url
+
+//cd into it
+
+git log
+
+
+//Brancingg
+
+cd story
+git log
+
+git branch alien-plot
+
+git branch 
+//gives all branches u have
+
+git checkout alien-plot
+//now we are on alien-plot branch and we will make changes here
+//change
+
+git add .
+git commit -m "modified to have alien theme"
+
+git checkout main
+
+touch chapter4.txt
+open
+git add .
+git commit -m "add chapt 4"
+
+//i would like to add alien in main
+
+git checkout main
+git merge alien-plot
+
+:q! to save and quit
+
+git branch 
+
+git log
+
+//to add it on github repo too and not only on local system
+git push origin master -u
+
+
+//pull requestss
+fork
+
+changes
+
+commit
+
+
+
+
+
+
+
+
+
+
+
+
+
