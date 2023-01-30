@@ -1,0 +1,7 @@
+to make sure i have a good grasp of things
+
+1. remake the to do list website on my own without looking at anything
+   I say if necessary just learn and remember while understanding like u did for your boards and every conventional exam 
+   Who knows that just might be way to go 
+2. try to implement removing of the items only when clicked on a button of remove. and not on reloading
+
