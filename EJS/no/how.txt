@@ -1,0 +1,5 @@
+UNDERSTANDING HOW THESE MODULES ACTUALLY WORK
+
+- code that is not strictly related to the route should not normally be cluttering in app.js --only routing there
+- so we took out the date code and made a new file date.js and will now use it as modules
+- but it is a local module hence you have to treat it that way
