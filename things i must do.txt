@@ -4,4 +4,10 @@ to make sure i have a good grasp of things
    I say if necessary just learn and remember while understanding like u did for your boards and every conventional exam 
    Who knows that just might be way to go 
 2. try to implement removing of the items only when clicked on a button of remove. and not on reloading
+3. redo the blogging website k challenges. You know you remember stuff only after you do it multiple times if not try making or cloning some other website
+4. difference between nosql and sql
+
+
+
+
 
