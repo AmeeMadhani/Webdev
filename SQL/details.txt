@@ -1,4 +1,0 @@
-crud - create read update destroy
-
-ok its just basic mysql that u already know
-

@@ -1,0 +1,13 @@
+crud - create read update destroy
+
+ok its just basic mysql that u already know
+
+keep following the documentation for and whenever you need whatever
+this is so boring
+i will just rewatch these videos when are where i need to in any project
+
+CONNECTING MONGODB WITH NODE
+using mongoose or mongoDB native driver
+
+
+
