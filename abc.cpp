@@ -1,49 +1,22 @@
-//if given the number of users, number of links and every two nodes having a link between each other. find out whether all the users are somehow connected to each other or not
-//if yes, print the number of links required to connect all the users
-//if no, print -1
+//code the main function for below example
+//input -
+// first line consists of m and n, respectively denoting the vertexes and edges of weight 1 in graph 3 3
+// 1 2
+//next m lines contain two integers a and b that show the edge between a and b of weight 1
+// 1 3
+// 2 3 
+//output - 
+//the weight of mst
+//2
 
-#include <iostream>
-#include <vector>
-#include <algorithm>
+//input -
+// first line consists of m and n, respectively denoting the vertexes and edges of weight 1 in graph 3 3
+// 4 6
+// //next m lines contain two integers a and b that show the edge between a and b of weight 1
 
-using namespace std;
-vector<int> adj[100000];
-bool visited[100000];
-
-void dfs(int u)
-{
-    visited[u] = true;
-    for(int i = 0; i < adj[u].size(); i++)
-    {
-        int v = adj[u][i];
-        if(!visited[v])
-            dfs(v);
-    }
-}
-
-int main(){
-    int n, m;
-    cout << "enter no. of user as nodes: ";
-    cin >> n >> m;
-    for(int i = 0; i < m; i++)
-    {
-        int u, v;
-        cin >> u >> v;
-        adj[u].push_back(v);
-        adj[v].push_back(u);
-    }
-    int count = 0;
-    for(int i = 1; i <= n; i++)
-    {
-        if(!visited[i])
-        {
-            dfs(i);
-            count++;
-        }
-    }
-    if(count == 1)
-        cout << m - n + 1 << endl;
-    else
-        cout << -1 << endl;
-    return 0;
-}
+// 1 2
+// 1 3
+// 1 4
+// 2 3
+// 2 4
+// 3 4
