@@ -1,86 +1,105 @@
-//you are planning to install a fibre cable setup in school
-// the cost of installing an optical fiber wired line for each school's route is the same.
-//you are requested to design a strategy for connecting all schools in the minimum possible ways so that the wired line of one route should not repeat twice and not form a cycle.
-//code to calculate the number of ways to connect all the schools using kruskals algorithm
-//example
-//input
-// total number of schools - 4
-// total identified routes - 4
-// 1 3 (route from 1 to 3)
-// 1 4 (route from 1 to 4)
-// 2 4 (route from 2 to 4)
-// 3 4 (route from 3 to 4)
-
-//output
-//3 (number of ways to connect all the schools)
-
-//input
-// total number of schools 4
-//  total identified routes 3
-// 1 2 (rotue from 1 to 2)
-// 1 3 (route from 1 to 3)
-// 3 4 (route from 3 to 4)
-
-//output 
-// 1 (number of ways to connect all the schools)
-
-#include <bits/stdc++.h>
-using namespace std;
-#define ll long long
-
-int find(int x, int parent[])
-{
-    if (parent[x] == x)
-        return x;
-    return parent[x] = find(parent[x], parent);
+// C++ program for implementation of RR scheduling 
+#include<iostream> 
+using namespace std; 
+// Function to find the waiting time for all 
+// processes 
+void findWaitingTime(int processes[], int n, 
+			int bt[], int wt[], int quantum) 
+{ 
+	// Make a copy of burst times bt[] to store remaining 
+	// burst times. 
+	int rem_bt[n]; 
+	for (int i = 0 ; i < n ; i++) 
+		rem_bt[i] = bt[i]; 
+	int t = 0; // Current time 
+	// Keep traversing processes in round robin manner 
+	// until all of them are not done. 
+	while (1) 
+	{ 
+		bool done = true; 
+		// Traverse all processes one by one repeatedly 
+		for (int i = 0 ; i < n; i++) 
+		{ 
+			// If burst time of a process is greater than 0 
+			// then only need to process further 
+			if (rem_bt[i] > 0) 
+			{ 
+				done = false; // There is a pending process 
+				if (rem_bt[i] > quantum) 
+				{ 
+					// Increase the value of t i.e. shows 
+					// how much time a process has been processed 
+					t += quantum; 
+					// Decrease the burst_time of current process 
+					// by quantum 
+					rem_bt[i] -= quantum; 
+				} 
+				// If burst time is smaller than or equal to 
+				// quantum. Last cycle for this process 
+				else
+				{ 
+					// Increase the value of t i.e. shows 
+					// how much time a process has been processed 
+					t = t + rem_bt[i]; 
+					// Waiting time is current time minus time 
+					// used by this process 
+					wt[i] = t - bt[i]; 
+					// As the process gets fully executed 
+					// make its remaining burst time = 0 
+					rem_bt[i] = 0; 
+				} 
+			} 
+		} 
+		// If all processes are done 
+		if (done == true) 
+		break; 
+	} 
+} 
+// Function to calculate turn around time 
+void findTurnAroundTime(int processes[], int n, 
+						int bt[], int wt[], int tat[]) 
+{ 
+	// calculating turnaround time by adding 
+	// bt[i] + wt[i] 
+	for (int i = 0; i < n ; i++) 
+		tat[i] = bt[i] + wt[i]; 
+} 
+// Function to calculate average time 
+void findavgTime(int processes[], int n, int bt[], 
+									int quantum) 
+{ 
+	int wt[n], tat[n], total_wt = 0, total_tat = 0; 
+	// Function to find waiting time of all processes 
+	findWaitingTime(processes, n, bt, wt, quantum); 
+	// Function to find turn around time for all processes 
+	findTurnAroundTime(processes, n, bt, wt, tat); 
+	// Display processes along with all details 
+	cout << "Processes "<< " Burst time "
+		<< " Waiting time " << " Turn around time\n"; 
+	// Calculate total waiting time and total turn 
+	// around time 
+	for (int i=0; i<n; i++) 
+	{ 
+		total_wt = total_wt + wt[i]; 
+		total_tat = total_tat + tat[i]; 
+		cout << " " << i+1 << "\t\t" << bt[i] <<"\t "
+			<< wt[i] <<"\t\t " << tat[i] <<endl; 
+	} 
+	cout << "Average waiting time = "
+		<< (float)total_wt / (float)n; 
+	cout << "\nAverage turn around time = "
+		<< (float)total_tat / (float)n; 
+} 
+int main() 
+{ 
+	// process id's 
+	int processes[] = { 1, 2, 3}; 
+	int n = sizeof processes / sizeof processes[0]; 
+	// Burst time of all processes 
+	int burst_time[] = {7, 2, 8}; 
+	// Time quantum 
+	int quantum = 2; 
+	findavgTime(processes, n, burst_time, quantum); 
+	return 0; 
 }
 
-void union1(int x, int y, int parent[], int rank[])
-{
-    x = find(x, parent);
-    y = find(y, parent);
-    if (rank[x] < rank[y])
-        parent[x] = y;
-    else if (rank[x] > rank[y])
-        parent[y] = x;
-    else
-    {
-        parent[y] = x;
-        rank[x]++;
-    }
-}
-
-int main()
-{
-    int n, m;
-    cin >> n >> m;
-    vector<vector<int>> edges;
-    for (int i = 0; i < m; i++)
-    {
-        int u, v, w;
-        cin >> u >> v;
-        edges.push_back({u, v});
-    }
-    int parent[n + 1];
-    int rank[n + 1];
-    for (int i = 1; i <= n; i++)
-    {
-        parent[i] = i;
-        rank[i] = 0;
-    }
-    int count = 0;
-    for (auto i : edges)
-    {
-        int u = i[0];
-        int v = i[1];
-        int x = find(u, parent);
-        int y = find(v, parent);
-        if (x != y)
-        {
-            union1(u, v, parent, rank);
-        }
-        else
-            count++;
-    }
-    cout << pow(2, count);
-}
