@@ -1,62 +1,19 @@
-// bucket sort of integers taking user input as number of elements and elements
-// input
-// input number of elements : 7
-// elements of an array : 23 32 26 36 11 41 77
+//Frist input is the n, the number of elements to be multiplied
+//Second input are the n elements to be multiplied
+// output 1 is the result of the first 2 multiplication
+// output 2 is the result of the multiplication of output 1 and the third input
+// ouput 3 is the final result of the multiplication of output 2 and the fourth input 
+// and so on
+// final output is the result of the multiplication of last output and last element taken as input
 
-//output
-// sorted array - 11 23 26 32 36 41 77
-
-//input
-// input number of elements : 6
-// elements of an array : 11 22 33 44 55 66
-
-//output
-// sorted array : 11 22 33 44 55 66
-
-#include <iostream>
-using namespace std;
-
-void bucketSort(int arr[], int n)
-{
-	int max = arr[0];
-	for (int i = 1; i < n; i++)
-	{
-		if (arr[i] > max)
-			max = arr[i];
-	}
-	int bucket[max + 1] = {0};
-	for (int i = 0; i < n; i++)
-	{
-		bucket[arr[i]]++;
-	}
-	int j = 0;
-	for (int i = 0; i < max + 1; i++)
-	{
-		while (bucket[i] > 0)
-		{
-			arr[j++] = i;
-			bucket[i]--;
-		}
-	}
-}
-
-int main()
-{
-	int n;
-	cout << "input number of elements : ";
-	cin >> n;
-	int arr[n];
-	cout << "elements of an array : ";
-	for (int i = 0; i < n; i++)
-	{
-		cin >> arr[i];
-	}
-	bucketSort(arr, n);
-	cout << "sorted array : ";
-	for (int i = 0; i < n; i++)
-	{
-		cout << arr[i] << " ";
-	}
-	return 0;
-}
+//input 1 - 
+// Enter the number of elements you want to multiply: 4
+// Enter the elements: 12333445555566
+//134353546464646464
+//12354546464646446
+//156677677788888888
+//output 1  - 
+//Result of Step 1: 1657042150518924003366257418624
+//Result of Step 2: 20472004242463716580907676034455010588775810304
+//Final Output: 3207506084393496532651480986406401597545259221630958080021501952
 
