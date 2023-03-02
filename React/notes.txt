@@ -1,0 +1,15 @@
+1. react and babel take care of all the specification and conversions needed according to the browser or conversion requirements
+2. render can only take 1 element at a time..you wont be able to add h1 and p tag one after other
+3. how to solve the above - just enclose them in a single div.
+4. curly braces is the way to go for adding js(calling variable or any logic) in html which is in js
+5. you cannot put in statements in them...only expressions are allowed inside curly braces
+6. a weird syntax look at the code carefully please. some ejs templating for the same concatenation
+7. adding a class for css and other changes will work but there will be a certain error. lets see what. for now know that your class and changes will be reflected like normal html file 
+8. just changed it to className lol
+9. you must use the closing tags in jsx but it works in html..html is forgiving, jsx does not 
+10.in javascript you need to add the inline styling as javascript object
+11.javascript objects exist in set of curly braces with key value pairs
+12.basically adding the css styling stuff in 2 curly braces one as we are writing js in html and another as we want a js object to be passed
+13.you cannot use kebbab case in js ka instyling you must use camel case
+14.and the values of various changes you want to make must be inside a string no matter number or anythingg
+15.
