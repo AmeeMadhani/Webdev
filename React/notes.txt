@@ -25,4 +25,6 @@
 25.understood props...its like now you can make your own attributed and call them using props..i would want to see the docs of react to know how the makers did it
 26.now you get 22..because then it would take it as an attribute to be called using the props and would not change anything
 27.I am proud of myself I am doing great.
-28.
+28.key is a special property cannot call it using props.key
+29.memorization is not what we do in the post google world..not after gpt at all. understand, keep in mind, google and use when u think its needed and good for your problem.
+30.
