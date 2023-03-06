@@ -12,4 +12,17 @@
 12.basically adding the css styling stuff in 2 curly braces one as we are writing js in html and another as we want a js object to be passed
 13.you cannot use kebbab case in js ka instyling you must use camel case
 14.and the values of various changes you want to make must be inside a string no matter number or anythingg
-15.
+15.always give function names as pascal cases. First letter capital
+16.self closing tags also exists like <Heading />
+17.to let both files know about each other you use es6 import export functionality
+18.no need to write the extension of file it will figure it out itself
+19.there is no complusion..its just a format or convention everyone is following for react dont get scared of it you are doing greattt
+20.you can use any name while importing any function or something from a file and call it inside index.js using the same name but not the others that you want to import, you will export them using curly braces and import them using the same. no name change allowed. only allowed for default one
+21.or if you dont want to import export things differently from a file u can always use * means all as some name it is a js object now pi.doublePi..pi.default and all
+22.dont apply the styles k liye vali class to the custom component that is where u call them in the app ka div. dont add class there add class in div of whatever cumponent you want to be edited like the one in note vala section of keeper app
+23.too avoid repeatation is why we created the components but how to provide different data for all of them 
+24.the attributes like the ones used for input tag are called properties in react. they can be used to set some properties that are visible and can be accessed easily. placeholder...value..id in html are examples
+25.understood props...its like now you can make your own attributed and call them using props..i would want to see the docs of react to know how the makers did it
+26.now you get 22..because then it would take it as an attribute to be called using the props and would not change anything
+27.I am proud of myself I am doing great.
+28.
