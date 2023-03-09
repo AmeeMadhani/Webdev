@@ -29,4 +29,10 @@
 29.memorization is not what we do in the post google world..not after gpt at all. understand, keep in mind, google and use when u think its needed and good for your problem.
 30.whatt the && operators are veryy different in react...if the condition is true then next things wirtten after && is implemented..both are not conditions they are in js but not in react. its condition && expression
 31.very weird syntax, to take it out again after once using destructing array..you must use it as objects. just [] changes to {}
-32.
+32.if you want to add form tag in the form you need to use some more things to make sure if works well..be careful about them as submit refreshes the page after all requests
+33.do not access event listeners in state ful variable
+34.I AM GETTINGN IMPATIENT NOWWW...IT IS JUST NOT ENDINNNGGG...I WANT TO START MAKING SOMETHING COOLL
+35.revise keeper app part 3 for it all that u have rushed
+36.endings are always like that dont worry
+37.styling resources are goodd in the dependancies and styling keeper app section
+38.
