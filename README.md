@@ -1,8 +1,7 @@
-### Learning web development using the udemy course by angela yu. 
-### I already know some stuff but I keep forgetting few things if I dont practice it for day.
-### I think it would be better to have it stored in notes like this or have some sample code. 
-### Lets go amee you can do it. I haven't seen someone as hardworking and someone turning next to impossible things possible as you. 
-
-###
-### I am liking the consistency that I am maintaining 
-### But I should not rush it. 
+## web development using the udemy course by angela yu. 
+- Learnt MERN Stack
+- This repository is to maintain the notes and consistency
+- Next steps  
+  1. clone few cool things
+  2. find begineer friendly projects and practice the things i learnt
+  3. try to make a cool project of my own
